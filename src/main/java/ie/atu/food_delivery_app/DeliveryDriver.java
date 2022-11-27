@@ -8,5 +8,19 @@ public class DeliveryDriver {
     private String LicenceNumber;
     private int Age;
 
+    public void setTitle(String title) {
+
+        if(("Mr").equalsIgnoreCase(title) || ("Mrs").equalsIgnoreCase(title) || ("Ms").equalsIgnoreCase(title)) {
+            Title = title;
+        }
+        else {
+            throw new IllegalArgumentException("Please enter Mr, Mrs or Ms");
+        }
+
+    }
+
+    public String getTitle() {
+        return Title;
+    }
 
 }
