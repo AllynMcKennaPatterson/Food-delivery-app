@@ -40,6 +40,16 @@ public class DeliveryDriver {
 
     }
 
+    public void setID(String id) {
+        int count = id.length();
+        if (count >= 10) {
+            ID = id;
+        }
+        else {
+            throw new IllegalArgumentException("ID must be greater than 10 characters long");
+        }
+
+    }
     public String getTitle() {
         return Title;
     }
