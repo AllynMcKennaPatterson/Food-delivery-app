@@ -73,7 +73,15 @@ public class DeliveryDriver {
 
     }
 
+    public void setAge(int age) {
+        if (age > 18) {
+            Age = age;
+        }
+        else {
+            throw new IllegalArgumentException("You must be over the age of 18 to be a food delivery driver with us, sorry");
+        }
 
+    }
 
 
     public String getTitle() {
