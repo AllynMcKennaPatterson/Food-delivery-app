@@ -25,17 +25,17 @@ public class BusinessProfileSuccessTest {
     }
 
     @Test
-    void testAddressSuccess(){
+    void testPhoneNoSuccess(){
         assertEquals("091556100", aBusiness.getBusinessPhoneNo());
     }
 
     @Test
-    void testAddressSuccess(){
+    void testOpenTimeSuccess(){
         assertEquals(1200, aBusiness.getBusinessOpenTime());
     }
 
     @Test
-    void testAddressSuccess(){
+    void testCloseTimeSuccess(){
         assertEquals(2300, aBusiness.getBusinessCloseTime());
     }
 }

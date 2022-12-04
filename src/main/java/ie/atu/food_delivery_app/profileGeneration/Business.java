@@ -59,4 +59,24 @@ public class Business {
             throw new IllegalArgumentException("Business closing time must be a valid 24hr time");
         }
     }
+
+    public String getBusinessName() {
+        return businessName;
+    }
+
+    public String getBusinessAddress() {
+        return businessAddress;
+    }
+
+    public String getBusinessPhoneNo() {
+        return businessPhoneNo;
+    }
+
+    public int getBusinessOpenTime() {
+        return businessOpenTime;
+    }
+
+    public int getBusinessCloseTime() {
+        return businessCloseTime;
+    }
 }
