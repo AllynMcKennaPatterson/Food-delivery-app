@@ -29,6 +29,17 @@ public class DeliveryDriver {
 
     }
 
+    public void setName(String name) {
+        int count = name.length();
+        if (count >= 3) {
+            Name = name;
+        }
+        else {
+            throw new IllegalArgumentException("Name must be greater than 3 characters long");
+        }
+
+    }
+
     public String getTitle() {
         return Title;
     }
