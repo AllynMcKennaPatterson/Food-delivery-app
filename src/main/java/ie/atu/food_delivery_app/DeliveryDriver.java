@@ -1,5 +1,15 @@
 package ie.atu.food_delivery_app;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+
 public class DeliveryDriver {
     private String Title;
     private String Name;
@@ -22,5 +32,6 @@ public class DeliveryDriver {
     public String getTitle() {
         return Title;
     }
+
  //test
 }
