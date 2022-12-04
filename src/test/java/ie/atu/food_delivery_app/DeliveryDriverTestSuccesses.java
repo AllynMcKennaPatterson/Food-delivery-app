@@ -1,4 +1,3 @@
-/*
 package ie.atu.food_delivery_app;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -8,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DeliveryDriverTestSuccesses {
     //Test
-    DeliveryDriver myDelivDriver;
+    DeliveryDriver MyDriver;
 
     @BeforeEach
     void setUp() {
@@ -16,23 +15,22 @@ class DeliveryDriverTestSuccesses {
 
     @Test
     void success_test_Title() {
-        DeliveryDriver myDelivDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", 21);
-        assertEquals("Mr", myDelivDriver.getTitle());
+        DeliveryDriver MyDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
+        assertEquals("Mr", MyDriver.getTitle());
     }
 
     @Test
     void success_test_Title_Mrs() {
-        DeliveryDriver myDelivDriver = new DeliveryDriver("Mrs", "Conor", "1111111111", "879543461", 21);
-        assertEquals("Mrs", myDelivDriver.getTitle());
+        DeliveryDriver MyDriver = new DeliveryDriver("Mrs", "Conor", "1111111111", "879543461", "2233445566", 21);
+        assertEquals("Mrs", MyDriver.getTitle());
     }
 
     @Test
     void success_test_Title_Ms() {
-        DeliveryDriver myDelivDriver = new DeliveryDriver("Ms", "Conor", "1111111111", "879543461", 21);
-        assertEquals("Ms", myDelivDriver.getTitle());
+        DeliveryDriver MyDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
+        assertEquals("Ms", MyDriver.getTitle());
     }
 
 
 
 }
-*/
