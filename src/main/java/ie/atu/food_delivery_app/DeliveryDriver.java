@@ -50,6 +50,20 @@ public class DeliveryDriver {
         }
 
     }
+
+    public void setCarReg(String carReg) {
+        int count = carReg.length();
+        if (count >= 4) {
+            CarReg = carReg;
+        }
+        else {
+            throw new IllegalArgumentException("Car registration must be greater than 4 characters long, do not enter - in your entry");
+        }
+
+    }
+
+
+
     public String getTitle() {
         return Title;
     }
