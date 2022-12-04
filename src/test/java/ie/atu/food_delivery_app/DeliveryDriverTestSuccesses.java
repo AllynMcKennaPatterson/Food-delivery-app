@@ -42,4 +42,10 @@ class DeliveryDriverTestSuccesses {
         DeliveryDriver myDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
         assertEquals("1111111111", myDriver.getID());
     }
+
+    @Test
+    void test_success_CarReg_check() {
+        DeliveryDriver myDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
+        assertEquals("879543461", myDriver.getCarReg());
+    }
 }

@@ -15,7 +15,7 @@ public class DeliveryDriver {
     private String Name;
     private String ID;
     private String CarReg;
-    private String LicenceNumber;
+    private String LicenceNo;
     private int Age;
 
     public void setTitle(String title) {
@@ -61,6 +61,18 @@ public class DeliveryDriver {
         }
 
     }
+
+    public void setLicenceNo(String licenseNo) {
+        int count = licenseNo.length();
+        if (count >= 8) {
+            LicenceNo = licenseNo;
+        }
+        else {
+            throw new IllegalArgumentException("Your licence must be greater than 8 characters long");
+        }
+
+    }
+
 
 
 
