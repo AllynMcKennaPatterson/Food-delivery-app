@@ -54,4 +54,10 @@ class DeliveryDriverTestSuccesses {
         DeliveryDriver myDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
         assertEquals("2233445566", myDriver.getLicenceNo());
     }
+
+    @Test
+    void test_success_Age_check() {
+        DeliveryDriver myDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
+        assertEquals(21, myDriver.getAge());
+    }
 }
