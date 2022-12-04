@@ -31,6 +31,10 @@ class DeliveryDriverTestSuccesses {
         assertEquals("Ms", MyDriver.getTitle());
     }
 
-
+    @Test
+    void test_success_name_check() {
+        DeliveryDriver myDriver = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
+        assertEquals("Conor", myDriver.getName());
+    }
 
 }
