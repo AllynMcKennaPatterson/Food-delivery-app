@@ -27,4 +27,11 @@ public class DeliveryDriverTestFails {
         assertEquals("Name must be greater than 3 characters long", exMessage.getMessage());
     }
 
+    @Test
+    void test_fail_Age_check() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
+            new DeliveryDriver("Mr", "Conor", "1111111111", "879543461","2233445566", 15);});
+        assertEquals("You must be over the age of 18 to be a food delivery driver with us, sorry", exMessage.getMessage());
+    }
+
 }
