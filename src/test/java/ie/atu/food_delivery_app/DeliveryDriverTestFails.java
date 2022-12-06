@@ -12,12 +12,19 @@ public class DeliveryDriverTestFails {
     }
 
     @Test
-    void testTitleFail(){
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> new DeliveryDriver("Mister", "Conor", "1111111111", "879543461", "2233445566", 21));
+    void testTitleFail() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
+            new DeliveryDriver("Mister", "Conor", "1111111111", "879543461", "2233445566", 21);
+        });
         assertEquals("Please enter Mr, Mrs or Ms", exMessage.getMessage());
     }
 
-    @AfterEach
-    void tearDown() {
+    @Test
+    void testNameFail() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
+            new DeliveryDriver("Mr", "Oj", "1111111111", "879543461", "2233445566", 21);
+        });
+        assertEquals("Name must be greater than 3 characters long", exMessage.getMessage());
     }
+
 }

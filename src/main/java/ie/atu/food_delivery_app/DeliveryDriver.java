@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
+//@AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,6 +17,15 @@ public class DeliveryDriver {
     private String CarReg;
     private String LicenceNo;
     private int Age;
+
+    public DeliveryDriver(String title, String name, String id, String carReg, String licenceNo, int age) {
+        setTitle(title);
+        setName(name);
+        setID(id);
+        setCarReg(carReg);
+        setLicenceNo(licenceNo);
+        setAge(age);
+    }
 
     public void setTitle(String title) {
 
