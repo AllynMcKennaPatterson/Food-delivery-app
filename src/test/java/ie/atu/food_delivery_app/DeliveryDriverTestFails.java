@@ -36,11 +36,19 @@ public class DeliveryDriverTestFails {
     }
 
     @Test
-    void testCarReg() {
+    void testCarRegFail() {
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
             new DeliveryDriver("Mr", "Conor", "1111111111", "1G1", "2233445566", 21);
         });
         assertEquals("Car registration must be greater than 4 characters long, do not enter - in your entry, for example 01G2345", exMessage.getMessage());
+    }
+
+    @Test
+    void testLicenceNoFail() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
+            new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2", 21);
+        });
+        assertEquals("Your licence must be greater than 8 characters long", exMessage.getMessage());
     }
 
 
