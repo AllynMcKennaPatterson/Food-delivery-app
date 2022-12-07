@@ -28,6 +28,15 @@ public class DeliveryDriverTestFails {
     }
 
     @Test
+    void testIdFail() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
+            new DeliveryDriver("Mr", "Oj", "1", "879543461", "2233445566", 21);
+        });
+        assertEquals("ID must be greater than 10 characters long", exMessage.getMessage());
+    }
+
+
+    @Test
     void test_fail_Age_check() {
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {
             new DeliveryDriver("Mr", "Conor", "1111111111", "879543461","2233445566", 15);});
