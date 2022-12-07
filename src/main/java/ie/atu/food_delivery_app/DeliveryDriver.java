@@ -66,7 +66,7 @@ public class DeliveryDriver {
             CarReg = carReg;
         }
         else {
-            throw new IllegalArgumentException("Car registration must be greater than 4 characters long, do not enter - in your entry");
+            throw new IllegalArgumentException("Car registration must be greater than 4 characters long, do not enter - in your entry, for example 01G2345");
         }
 
     }
