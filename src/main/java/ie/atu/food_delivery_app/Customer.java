@@ -1,10 +1,20 @@
 package ie.atu.food_delivery_app;
 
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@NoArgsConstructor
+@Entity
+@Table
 public class Customer {
     private String title;
     private String name;
     private long phone;
     private String eircode;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long count;
 
     public Customer(String title, String name, long phone, String eircode){
         setTitle(title);
