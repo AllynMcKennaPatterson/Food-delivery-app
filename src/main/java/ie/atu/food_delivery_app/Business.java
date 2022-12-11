@@ -8,11 +8,11 @@ public class Business {
     private int businessCloseTime;
 
     public Business(String businessName, String businessAddress, String businessPhoneNo, int businessOpenTime, int businessCloseTime) {
-        this.businessName = businessName;
-        this.businessAddress = businessAddress;
-        this.businessPhoneNo = businessPhoneNo;
-        this.businessOpenTime = businessOpenTime;
-        this.businessCloseTime = businessCloseTime;
+        setBusinessName(businessName);
+        setBusinessAddress(businessAddress);
+        setBusinessPhoneNo(businessPhoneNo);
+        setBusinessOpenTime(businessOpenTime);
+        setBusinessCloseTime(businessCloseTime);
     }
 
     public void setBusinessName(String businessName){
