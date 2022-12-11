@@ -5,6 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 //@AllArgsConstructor
 
 @NoArgsConstructor
@@ -16,6 +20,9 @@ public class DeliveryDriver {
     private String CarReg;
     private String LicenceNo;
     private int Age;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long count;
 
 
     public DeliveryDriver(String title, String name, String id, String carReg, String licenceNo, int age) {
