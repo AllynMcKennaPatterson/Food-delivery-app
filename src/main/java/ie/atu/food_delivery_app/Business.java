@@ -6,7 +6,7 @@ public class Business {
     private String businessPhoneNo;
     private int businessOpenTime;
     private int businessCloseTime;
-
+//Testing Travis CI
     public Business(String businessName, String businessAddress, String businessPhoneNo, int businessOpenTime, int businessCloseTime) {
         setBusinessName(businessName);
         setBusinessAddress(businessAddress);
