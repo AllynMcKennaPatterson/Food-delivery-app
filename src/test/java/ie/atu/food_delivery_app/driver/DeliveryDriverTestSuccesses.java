@@ -1,4 +1,4 @@
-package ie.atu.food_delivery_app;
+package ie.atu.food_delivery_app.driver;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DeliveryDriverTestSuccesses {
-    //Test
+
     DeliveryDriver MyDriver;
 
     @BeforeEach

@@ -1,11 +1,11 @@
-package ie.atu.food_delivery_app;
+package ie.atu.food_delivery_app.driver;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-//@AllArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
