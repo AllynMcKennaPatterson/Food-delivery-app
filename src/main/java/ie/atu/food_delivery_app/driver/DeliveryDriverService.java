@@ -22,4 +22,8 @@ public class DeliveryDriverService {
         DeliveryDriver myDeliveryDriverUsers = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
         return myDeliveryDriverUsers;
     }
+
+    public void saveDeliveryDriverUser(DeliveryDriver deliveryDriverUser) {
+        deliveryDriverRepo.save(deliveryDriverUser);
+    }
 }
