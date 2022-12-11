@@ -17,4 +17,9 @@ public class DeliveryDriverService {
     {
         return deliveryDriverRepo.findAll();
     }
+
+    public DeliveryDriver getDeliveryDriver(String driverID){
+        DeliveryDriver myDeliveryDriverUsers = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
+        return myDeliveryDriverUsers;
+    }
 }
