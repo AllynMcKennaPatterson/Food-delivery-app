@@ -1,11 +1,27 @@
 package ie.atu.food_delivery_app.business;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table
 public class Business {
     private String businessName;
     private String businessAddress;
     private String businessPhoneNo;
     private int businessOpenTime;
     private int businessCloseTime;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long count;
 
     public Business(String businessName, String businessAddress, String businessPhoneNo, int businessOpenTime, int businessCloseTime) {
         setBusinessName(businessName);
