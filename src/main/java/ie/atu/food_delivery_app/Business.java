@@ -1,4 +1,4 @@
-package ie.atu.food_delivery_app.profileGeneration;
+package ie.atu.food_delivery_app;
 
 public class Business {
     private String businessName;
