@@ -2,6 +2,7 @@ package ie.atu.food_delivery_app.business;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 @AllArgsConstructor
 @Service
@@ -9,7 +10,7 @@ public class BusinessService {
 
     private final BusinessRepo businessRepo;
 
-    public List<BusinessRepo> getBusinesses()
+    public List<Business> getBusinesses()
     {
         return businessRepo.findAll();
     }
@@ -19,6 +20,6 @@ public class BusinessService {
         return myBusinessUsers;
     }
     public void saveBusinessUser(Business businessUser) {
-        businessRepo.save(user);
+        businessRepo.save(businessUser);
     }
 }

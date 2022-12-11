@@ -1,6 +1,7 @@
 package ie.atu.food_delivery_app.business;
 
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping(path="api/business")
@@ -17,7 +18,7 @@ public class BusinessController {
     }
 
     @GetMapping("/{businessID}")
-    public Bank getBusinesses(@PathVariable String businessID){
+    public Business getBusinesses(@PathVariable String businessID){
         return myService.getBusinesses(businessID);
     }
 
