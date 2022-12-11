@@ -6,7 +6,7 @@ public class Business {
     private String businessPhoneNo;
     private int businessOpenTime;
     private int businessCloseTime;
-
+//Testr
     public Business(String businessName, String businessAddress, String businessPhoneNo, int businessOpenTime, int businessCloseTime) {
         setBusinessName(businessName);
         setBusinessAddress(businessAddress);
