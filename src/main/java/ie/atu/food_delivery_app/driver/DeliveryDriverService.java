@@ -1,7 +1,5 @@
 package ie.atu.food_delivery_app.driver;
 
-import ie.atu.food_delivery_app.customer.Customer;
-import ie.atu.food_delivery_app.customer.CustomerRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
