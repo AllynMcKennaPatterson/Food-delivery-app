@@ -1,5 +1,6 @@
 package ie.atu.food_delivery_app;
 
+import ie.atu.food_delivery_app.customer.Customer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
