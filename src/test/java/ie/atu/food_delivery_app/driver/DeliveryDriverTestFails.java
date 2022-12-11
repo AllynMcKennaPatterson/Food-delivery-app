@@ -1,4 +1,4 @@
-package ie.atu.food_delivery_app;
+package ie.atu.food_delivery_app.driver;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
