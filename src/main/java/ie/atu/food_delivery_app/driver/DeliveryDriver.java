@@ -1,4 +1,4 @@
-package ie.atu.food_delivery_app;
+package ie.atu.food_delivery_app.driver;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
