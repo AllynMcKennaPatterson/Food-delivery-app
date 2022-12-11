@@ -6,8 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 //@AllArgsConstructor
-@Getter
-@Setter
+
 @NoArgsConstructor
 
 public class DeliveryDriver {
@@ -92,10 +91,27 @@ public class DeliveryDriver {
 
     }
 
+    public String getName() {
+        return Name;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public String getCarReg() {
+        return CarReg;
+    }
+
+    public String getLicenceNo() {
+        return LicenceNo;
+    }
+
+    public int getAge() {
+        return Age;
+    }
 
     public String getTitle() {
         return Title;
     }
-
- //test
 }
