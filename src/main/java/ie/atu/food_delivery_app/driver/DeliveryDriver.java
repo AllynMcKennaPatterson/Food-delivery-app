@@ -5,9 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
-@Getter
-@Setter
+//@AllArgsConstructor
+
 @NoArgsConstructor
 
 public class DeliveryDriver {
@@ -18,6 +17,7 @@ public class DeliveryDriver {
     private String LicenceNo;
     private int Age;
 
+
     public DeliveryDriver(String title, String name, String id, String carReg, String licenceNo, int age) {
         setTitle(title);
         setName(name);
@@ -26,7 +26,6 @@ public class DeliveryDriver {
         setLicenceNo(licenceNo);
         setAge(age);
     }
-
     public void setTitle(String title) {
 
         if(("Mr").equalsIgnoreCase(title) || ("Mrs").equalsIgnoreCase(title) || ("Ms").equalsIgnoreCase(title)) {
@@ -97,5 +96,23 @@ public class DeliveryDriver {
         return Title;
     }
 
- //test
+    public String getName() {
+        return Name;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public String getCarReg() {
+        return CarReg;
+    }
+
+    public String getLicenceNo() {
+        return LicenceNo;
+    }
+
+    public int getAge() {
+        return Age;
+    }
 }
