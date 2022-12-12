@@ -1,5 +1,4 @@
-package ie.atu.food_delivery_app.profileGeneration;
-
+package ie.atu.food_delivery_app.business;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

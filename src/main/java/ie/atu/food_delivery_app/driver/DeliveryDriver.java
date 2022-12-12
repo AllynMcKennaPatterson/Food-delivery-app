@@ -1,13 +1,16 @@
-package ie.atu.food_delivery_app;
+package ie.atu.food_delivery_app.driver;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 //@AllArgsConstructor
-@Getter
-@Setter
+
 @NoArgsConstructor
 
 public class DeliveryDriver {
@@ -17,6 +20,10 @@ public class DeliveryDriver {
     private String CarReg;
     private String LicenceNo;
     private int Age;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long count;
+
 
     public DeliveryDriver(String title, String name, String id, String carReg, String licenceNo, int age) {
         setTitle(title);
@@ -26,7 +33,6 @@ public class DeliveryDriver {
         setLicenceNo(licenceNo);
         setAge(age);
     }
-
     public void setTitle(String title) {
 
         if(("Mr").equalsIgnoreCase(title) || ("Mrs").equalsIgnoreCase(title) || ("Ms").equalsIgnoreCase(title)) {
@@ -97,5 +103,23 @@ public class DeliveryDriver {
         return Title;
     }
 
- //test
+    public String getName() {
+        return Name;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public String getCarReg() {
+        return CarReg;
+    }
+
+    public String getLicenceNo() {
+        return LicenceNo;
+    }
+
+    public int getAge() {
+        return Age;
+    }
 }

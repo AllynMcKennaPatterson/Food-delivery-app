@@ -1,18 +1,34 @@
-package ie.atu.food_delivery_app.profileGeneration;
+package ie.atu.food_delivery_app.business;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table
 public class Business {
     private String businessName;
     private String businessAddress;
     private String businessPhoneNo;
     private int businessOpenTime;
     private int businessCloseTime;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long count;
 
     public Business(String businessName, String businessAddress, String businessPhoneNo, int businessOpenTime, int businessCloseTime) {
-        this.businessName = businessName;
-        this.businessAddress = businessAddress;
-        this.businessPhoneNo = businessPhoneNo;
-        this.businessOpenTime = businessOpenTime;
-        this.businessCloseTime = businessCloseTime;
+        setBusinessName(businessName);
+        setBusinessAddress(businessAddress);
+        setBusinessPhoneNo(businessPhoneNo);
+        setBusinessOpenTime(businessOpenTime);
+        setBusinessCloseTime(businessCloseTime);
     }
 
     public void setBusinessName(String businessName){

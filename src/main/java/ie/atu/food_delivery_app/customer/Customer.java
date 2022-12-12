@@ -1,4 +1,4 @@
-package ie.atu.food_delivery_app;
+package ie.atu.food_delivery_app.customer;
 
 public class Customer {
     private String title;
