@@ -13,16 +13,15 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table
-
 public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long customerId;
 
     private String title;
     private String name;
     private long phone;
     private String eircode;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long customerId;
 
     public Customer(String title, String name, long phone, String eircode){
         setTitle(title);
