@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.Assert.assertThat;
 
 @SpringBootTest
-class CustomerControllerTest {
+class SpringbootjunitApplicationTest {
 
     @Autowired
     private CustomerRepo customerRepo;
