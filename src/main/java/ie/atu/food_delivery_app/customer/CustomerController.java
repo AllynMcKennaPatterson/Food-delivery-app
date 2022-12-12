@@ -20,10 +20,10 @@ public class CustomerController {
         return myService.getCustomers();
     }
 
-    @GetMapping("/{customerEircode}")
-    public Customer getCustomerByEircode(@PathVariable String eircode){
+    /*@GetMapping("/eircode/{eircode}")
+    public Customer getCustomerByEircode(@PathVariable("eircode") String eircode){
         return myService.getCustomerByEircode(eircode);
-    }
+    }*/
 
     @PostMapping
     public void saveCustomerUser(@RequestBody Customer customerUser){
