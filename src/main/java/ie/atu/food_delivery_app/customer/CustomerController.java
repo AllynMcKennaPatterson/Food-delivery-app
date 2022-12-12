@@ -20,9 +20,9 @@ public class CustomerController {
         return myService.getCustomers();
     }
 
-    @GetMapping("/{customerID}")
-    public Customer getCustomers(@PathVariable String customerID){
-        return myService.getCustomers(customerID);
+    @GetMapping("/{customerEircode}")
+    public Customer getCustomerByEircode(@PathVariable String eircode){
+        return myService.getCustomerByEircode(eircode);
     }
 
     @PostMapping
