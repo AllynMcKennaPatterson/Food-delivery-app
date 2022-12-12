@@ -25,8 +25,8 @@ public class CustomerController {
         return myService.getCustomerByEircode(eircode);
     }
 
-    @PostMapping
-    public void saveCustomerUser(@RequestBody Customer customerUser){
-        myService.saveCustomerUser(customerUser);
+    @PostMapping("")
+    public void saveCustomer(@RequestBody Customer customer){
+        myService.saveCustomer(customer);
     }
 }
