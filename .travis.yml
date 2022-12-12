@@ -3,3 +3,9 @@ language: java
 jdk:
   - openjdk11
 
+before_install:
+  - docker pull openjdk:11-jdk-alphine
+
+script:
+  - mvn test
+  - mvn clean package
