@@ -25,10 +25,10 @@ public class Customer {
     private String eircode;
 
     public Customer(String title, String name, long phone, String eircode){
-        this.title = title;
-        this.name = name;
-        this.phone = phone;
-        this.eircode = eircode;
+        setTitle(title);
+        setName(name);
+        setPhone(phone);
+        setEircode(eircode);
     }
 
     public String getTitle() {
