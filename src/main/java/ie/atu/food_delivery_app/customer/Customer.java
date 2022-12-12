@@ -1,16 +1,34 @@
 package ie.atu.food_delivery_app.customer;
 
+import java.util.Objects;
+import lombok.*;
+
+import javax.persistence.*;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table
+
 public class Customer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long customerId;
+
     private String title;
     private String name;
     private long phone;
     private String eircode;
 
     public Customer(String title, String name, long phone, String eircode){
-        setTitle(title);
-        setName(name);
-        setPhone(phone);
-        setEircode(eircode);
+        this.title = title;
+        this.name = name;
+        this.phone = phone;
+        this.eircode = eircode;
     }
 
     public String getTitle() {
