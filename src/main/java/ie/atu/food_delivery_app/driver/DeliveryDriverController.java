@@ -20,10 +20,10 @@ public class DeliveryDriverController {
         return myService.getDeliveryDrivers();
     }
 
-    @GetMapping("/{driverID}")
+   /* @GetMapping("/{driverID}")
     public DeliveryDriver getDeliveryDriver(@PathVariable String driverID){
         return myService.getDeliveryDriver(driverID);
-    }
+    }*/
 
     @PostMapping
     public void saveDeliveryDriverUser(@RequestBody DeliveryDriver saveDeliveryDriverUser){
