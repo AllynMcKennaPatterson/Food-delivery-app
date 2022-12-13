@@ -15,15 +15,15 @@ import javax.persistence.*;
 @Table
 
 public class DeliveryDriver {
+    private String ID;
     private String Title;
     private String Name;
-    private String ID;
     private String CarReg;
     private String LicenceNo;
     private int Age;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long driverCount;
+    private Long driverCount;
 
 
     public DeliveryDriver(String title, String name, String id, String carReg, String licenceNo, int age) {
