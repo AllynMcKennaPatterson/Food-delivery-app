@@ -24,7 +24,7 @@ notifications:
 
 #what runs before instalatiion
 before_install:
-  - chmod +x mvnw
+  - chmod +x mvnw #Make mvn file executable
   - mvn clean #clean maven file
   - docker pull openjdk:15-jdk-alpine #pull java image from docker
   - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin #copy docker credentials
@@ -37,3 +37,5 @@ install:
 
 
 
+
+#For video example.
