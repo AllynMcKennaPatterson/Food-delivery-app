@@ -21,7 +21,7 @@ public class Business {
     private int businessCloseTime;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long count;
+    private long businessCount;
 
     public Business(String businessName, String businessAddress, String businessPhoneNo, int businessOpenTime, int businessCloseTime) {
         setBusinessName(businessName);
