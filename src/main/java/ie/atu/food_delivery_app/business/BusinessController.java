@@ -17,18 +17,18 @@ public class BusinessController {
         return myService.getBusinesses();
     }
 
-    @GetMapping("/business/{businessName}")
+    /*@GetMapping("/business/{businessName}")
     public Business getBusinessesByName(@PathVariable String businessName){
         return myService.getBusinessesByName(businessName);
-    }
+    }*/
 
     @PostMapping("")
     public void saveBusinessUser(@RequestBody Business business){
         myService.saveBusiness(business);
     }
 
-    @DeleteMapping("/delete/{businessCount}")
+    /*@DeleteMapping("/delete/{businessCount}")
     public void deletePassenger(@PathVariable("businessCount")Long businessCount){
         myService.deleteBusiness(businessCount);
-    }
+    }*/
 }

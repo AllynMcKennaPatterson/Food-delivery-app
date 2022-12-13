@@ -17,15 +17,11 @@ public class DeliveryDriverService {
         return deliveryDriverRepo.findAll();
     }
 
-    public DeliveryDriver getDeliveryDriver(String ID){
-        return deliveryDriverRepo.getDeliveryDriver(ID);
-    }
-
     public void saveDeliveryDriverUser(DeliveryDriver deliveryDriverUser) {
         deliveryDriverRepo.save(deliveryDriverUser);
     }
 
-    public void deleteDeliveryDriver(String ID){
-        deliveryDriverRepo.deleteById(ID);
-    }
+    /*public void deleteDeliveryDriver(Long driverCount){
+        deliveryDriverRepo.deleteDeliveryDriver(driverCount);
+    }*/
 }

@@ -15,14 +15,14 @@ public class BusinessService {
         return businessRepo.findAll();
     }
 
-    public Business getBusinessesByName(String businessName){
+    /*public Business getBusinessesByName(String businessName){
         return businessRepo.getBusinessByName(businessName);
-    }
+    }*/
     public void saveBusiness(Business businessUser) {
         businessRepo.save(businessUser);
     }
 
-    public void deleteBusiness(Long businessCount){
+    /*public void deleteBusiness(Long businessCount){
         businessRepo.deleteById(businessCount);
-    }
+    }*/
 }
