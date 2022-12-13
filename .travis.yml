@@ -1,22 +1,27 @@
+#Uses Ubuntu 18.04 xenial
 dist: xenial
 
+#Uses docker
 services:
   - docker
 
+#language is Java
 language: java
 
+#Set jdk
 jdk: openjdk15
 
+#what runs before instalatiion
 before_install:
   - chmod +x mvnw
-  - mvn clean
-  - docker pull openjdk:15-jdk-alpine
-  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+  - mvn clean #clean maven file
+  - docker pull openjdk:15-jdk-alpine #pull java image from docker
+  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin #copy docker credentials
   - docker pull openjdk:15-jdk-alpine
 
 install:
-  - mvn -N io.takari:maven:wrapper
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn -N io.takari:maven:wrapper #Checks to make sure travis can run the maven build
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V #Run maven install and skip javadoc generation
 
 
 
