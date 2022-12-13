@@ -5,24 +5,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-//@AllArgsConstructor
-
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table
 
 public class DeliveryDriver {
+    private String ID;
     private String Title;
     private String Name;
-    private String ID;
     private String CarReg;
     private String LicenceNo;
     private int Age;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long count;
+    private Long driverCount;
 
 
     public DeliveryDriver(String title, String name, String id, String carReg, String licenceNo, int age) {

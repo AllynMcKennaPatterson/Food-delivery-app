@@ -20,13 +20,19 @@ public class CustomerController {
         return myService.getCustomers();
     }
 
-    @GetMapping("/{customerID}")
-    public Customer getCustomers(@PathVariable String customerID){
-        return myService.getCustomers(customerID);
+    @GetMapping("/eircode/{eircode}")
+    public Customer getCustomerByEircode(@PathVariable("eircode") String eircode){
+        return myService.getCustomerByEircode(eircode);
     }
 
     @PostMapping
     public void saveCustomerUser(@RequestBody Customer customerUser){
         myService.saveCustomerUser(customerUser);
+    }
+
+    @DeleteMapping("/delete/{customerId}")
+    public void deleteCustomer(@PathVariable("customerId")Long customerId){
+
+        myService.deleteCustomer(customerId);
     }
 }

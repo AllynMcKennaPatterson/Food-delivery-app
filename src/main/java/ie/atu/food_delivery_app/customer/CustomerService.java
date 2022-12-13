@@ -18,11 +18,15 @@ public class CustomerService {
         return customerRepo.findAll();
     }
 
-    public Customer getCustomers(String customerID){
-        Customer myCustomerUsers = new Customer("Mr", "Denis", 12345678, "H914321");
-        return myCustomerUsers;
+    public Customer getCustomerByEircode(String eircode){
+        return customerRepo.getCustomerByEircode(eircode);
     }
     public void saveCustomerUser(Customer customerUser) {
         customerRepo.save(customerUser);
+    }
+
+    public void deleteCustomer(Long customerId){
+
+        customerRepo.deleteById(customerId);
     }
 }

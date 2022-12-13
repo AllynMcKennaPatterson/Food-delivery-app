@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 @SpringBootApplication
 public class FoodDeliveryAppApplication {
+
 	@Autowired
 	private CustomerEmailService senderService;
 

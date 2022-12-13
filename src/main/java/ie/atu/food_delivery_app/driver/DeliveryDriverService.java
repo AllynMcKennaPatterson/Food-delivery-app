@@ -3,6 +3,7 @@ package ie.atu.food_delivery_app.driver;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.sql.Driver;
 import java.util.List;
 
 @AllArgsConstructor
@@ -16,12 +17,11 @@ public class DeliveryDriverService {
         return deliveryDriverRepo.findAll();
     }
 
-    public DeliveryDriver getDeliveryDriver(String driverID){
-        DeliveryDriver myDeliveryDriverUsers = new DeliveryDriver("Mr", "Conor", "1111111111", "879543461", "2233445566", 21);
-        return myDeliveryDriverUsers;
-    }
-
     public void saveDeliveryDriverUser(DeliveryDriver deliveryDriverUser) {
         deliveryDriverRepo.save(deliveryDriverUser);
     }
+
+    /*public void deleteDeliveryDriver(Long driverCount){
+        deliveryDriverRepo.deleteDeliveryDriver(driverCount);
+    }*/
 }

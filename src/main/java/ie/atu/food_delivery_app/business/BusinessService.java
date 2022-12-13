@@ -15,11 +15,14 @@ public class BusinessService {
         return businessRepo.findAll();
     }
 
-    public Business getBusinesses(String businessID){
-        Business myBusinessUsers = new Business("Dominos", "16 Prospect Hill", "091556100", 1200, 2300);
-        return myBusinessUsers;
-    }
-    public void saveBusinessUser(Business businessUser) {
+    /*public Business getBusinessesByName(String businessName){
+        return businessRepo.getBusinessByName(businessName);
+    }*/
+    public void saveBusiness(Business businessUser) {
         businessRepo.save(businessUser);
     }
+
+    /*public void deleteBusiness(Long businessCount){
+        businessRepo.deleteById(businessCount);
+    }*/
 }

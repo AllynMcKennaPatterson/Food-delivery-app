@@ -1,4 +1,38 @@
+#Uses latest version of Ubuntu xenial to travis
+dist: xenial
+
+#Uses docker
+services:
+  - docker
+
+#Language is Java
 language: java
 
-jdk:
-  - openjdk11
+#Set jdk
+jdk: openjdk15
+
+#Sends notifications
+notifications:
+  email:
+    recipients:
+      - g00391846@atu.ie #Conor
+      - g00396309@atu.ie #Denis
+      - g00392765@atu.ie #Alyn
+      - g00397265@atu.ie #Pat
+    on_success: always #Sends if failure or success
+    on_failure: always
+
+#what runs before instalatiion
+before_install:
+  - chmod +x mvnw #Make mvn file executable
+  - mvn clean #clean maven file
+  - docker pull openjdk:15-jdk-alpine #pull java image from docker
+  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin #copy docker credentials
+
+#Git strips the wrapper jar file so it has to be downloaded again during the build
+install:
+  - mvn -N io.takari:maven:wrapper
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V #Run maven install and skip javadoc generation
+
+
+#Test

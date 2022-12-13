@@ -13,17 +13,22 @@ public class BusinessController {
     }
 
     @GetMapping
-    public List<Business> getBusinesses(){
+    public List<Business> getBusinessesByName(){
         return myService.getBusinesses();
     }
 
-    @GetMapping("/{businessID}")
-    public Business getBusinesses(@PathVariable String businessID){
-        return myService.getBusinesses(businessID);
+    /*@GetMapping("/business/{businessName}")
+    public Business getBusinessesByName(@PathVariable String businessName){
+        return myService.getBusinessesByName(businessName);
+    }*/
+
+    @PostMapping("")
+    public void saveBusinessUser(@RequestBody Business business){
+        myService.saveBusiness(business);
     }
 
-    @PostMapping
-    public void saveBusinessUser(@RequestBody Business businessUser){
-        myService.saveBusinessUser(businessUser);
-    }
+    /*@DeleteMapping("/delete/{businessCount}")
+    public void deletePassenger(@PathVariable("businessCount")Long businessCount){
+        myService.deleteBusiness(businessCount);
+    }*/
 }
