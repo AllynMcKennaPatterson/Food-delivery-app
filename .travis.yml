@@ -5,11 +5,11 @@ services:
 
 language: java
 
-jdk: openjdk11
+jdk: openjdk15
 
 before_install:
   - mvn clean
-  - docker pull openjdk:11-jdk-alpine
+  - docker pull openjdk:15-jdk-alpine
 
 install:
   - mvn -N io.takari:maven:wrapper
