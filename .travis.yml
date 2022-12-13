@@ -3,8 +3,7 @@ jdk: openjdk11
 services:
   - docker
 
-before_install:
-  - docker pull openjdk11-alpine
+
 script:
   - mvn test
   - mvn clean package
