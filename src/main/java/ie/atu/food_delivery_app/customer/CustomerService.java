@@ -18,9 +18,9 @@ public class CustomerService {
         return customerRepo.findAll();
     }
 
-    /*public Customer getCustomerByEircode(String eircode){
+    public Customer getCustomerByEircode(String eircode){
         return customerRepo.getCustomerByEircode(eircode);
-    }*/
+    }
     public void saveCustomerUser(Customer customerUser) {
         customerRepo.save(customerUser);
     }
