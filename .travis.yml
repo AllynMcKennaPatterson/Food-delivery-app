@@ -1,5 +1,5 @@
 #Uses Ubuntu 18.04 xenial
-dist: xenial
+dist: bionic
 
 #Uses docker
 services:
@@ -10,6 +10,16 @@ language: java
 
 #Set jdk
 jdk: openjdk15
+
+notifications:
+  email:
+    recipients:
+      - g00391846@atu.ie
+      - g00396309@atu.ie
+      - g00392765@atu.ie
+      - g00397265@atu.ie
+    on_success: always
+    on_failure: always
 
 #what runs before instalatiion
 before_install:
