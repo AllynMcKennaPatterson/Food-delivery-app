@@ -14,7 +14,7 @@ jdk: openjdk15
 #what runs before instalatiion
 before_install:
   - chmod +x mvnw
-  - mvn clean //clean maven file
+  - mvn clean #clean maven file
   - docker pull openjdk:15-jdk-alpine #pull java image from docker
   - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin #copy docker credentials
   - docker pull openjdk:15-jdk-alpine
