@@ -1,5 +1,5 @@
 #Uses latest version of travis
-dist: bionic
+dist: xenial
 
 #Uses docker
 services:
@@ -35,7 +35,3 @@ install:
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V #Run maven install and skip javadoc generation
 
 
-
-
-
-#For video example.
