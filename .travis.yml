@@ -1,13 +1,20 @@
-language: java
-jdk: openjdk11
+dist: xenial
+
 services:
   - docker
 
+language: java
 
-script:
-  - mvn test
-  - mvn clean package
-  - docker build -t travis-test .
-  - docker images
-  - docker tag travis-test interviewdot/travis-test
-  - docker push interviewdot/travis-test
+jdk: openjdk11
+
+before_install:
+  - mvn clean
+  - docker pull openjdk:11-jdk-alpine
+
+install:
+  - mvn -N io.takari:maven:wrapper
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+
+
+
