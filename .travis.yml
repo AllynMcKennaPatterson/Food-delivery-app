@@ -8,7 +8,10 @@ language: java
 jdk: openjdk15
 
 before_install:
+  - chmod +x mvnw
   - mvn clean
+  - docker pull openjdk:15-jdk-alpine
+  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
   - docker pull openjdk:15-jdk-alpine
 
 install:
