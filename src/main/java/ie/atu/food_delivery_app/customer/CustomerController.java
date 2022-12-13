@@ -29,4 +29,9 @@ public class CustomerController {
     public void saveCustomerUser(@RequestBody Customer customerUser){
         myService.saveCustomerUser(customerUser);
     }
+
+    @DeleteMapping("/delete/{customerId}")
+    public void deleteCustomer(@PathVariable("customerId")Long customerId){
+        myService.deleteCustomer(customerId);
+    }
 }
