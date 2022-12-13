@@ -20,13 +20,18 @@ public class DeliveryDriverController {
         return myService.getDeliveryDrivers();
     }
 
-   /* @GetMapping("/{driverID}")
-    public DeliveryDriver getDeliveryDriver(@PathVariable String driverID){
-        return myService.getDeliveryDriver(driverID);
-    }*/
+    @GetMapping("/driverid/{ID}")
+    public DeliveryDriver getDeliveryDriver(@PathVariable("ID") String ID){
+        return myService.getDeliveryDriver(ID);
+    }
 
     @PostMapping
     public void saveDeliveryDriverUser(@RequestBody DeliveryDriver saveDeliveryDriverUser){
         myService.saveDeliveryDriverUser(saveDeliveryDriverUser);
     }
+
+    @DeleteMapping("/deleteDriver/{ID}")
+        public void deleteDeliveryDriver(@PathVariable("ID")String ID){
+            myService.deleteDeliveryDriver(ID);
+        }
 }

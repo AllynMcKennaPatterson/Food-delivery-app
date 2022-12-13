@@ -23,7 +23,7 @@ public class DeliveryDriver {
     private int Age;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long count;
+    private long driverCount;
 
 
     public DeliveryDriver(String title, String name, String id, String carReg, String licenceNo, int age) {
